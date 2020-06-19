@@ -34,4 +34,4 @@ class Gallery(models.Model):
     upload_video = models.FileField(upload_to='static/videos/', default='', blank=True, null=True)
     upload_pic = models.ImageField(upload_to='static/gallery/', default='static/images/a2.jpg',)
     pic_url = models.URLField(max_length=200, default='', blank=True, null=True)
-    caption = models.CharField(max_length=50, default='', blank=True, null=True)
+    caption = models.CharField(max_length=50, default='Dj studio', blank=True, null=True)

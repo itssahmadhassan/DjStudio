@@ -22,6 +22,7 @@
     <!--//////// gallery images  ...1st... row   //////-->
 
     <div class="row">
+        {%with a=0 b=2 %}
 
         {% for gallery in gallery %}
         <div class="col m2 s4">
@@ -41,39 +42,15 @@
                  class="responsive-img materialboxed hoverable center z-depth-5"
                  data-caption="{{gallery.caption}}">
             {% endif %}
-            {% if forloop.six %}
+            {% a = a+1 %}
+            {% if a==6 %}
             <br><br>
-
             {% endif %}
+                {% endwith %}
+
         </div>
-        <!--    <div class="col m2 s4 "><img src="{% static 'images/a1.jpg' %}" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-        <!--    <div class="col m2 s4 "><img src="{% static 'images/a1.jpg' %}" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-        <!--    <div class="col m2 s4 "><img src="{% static 'images/a1.jpg' %}" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-        <!--    <div class="col m2 s4 "><img src="{% static 'images/a1.jpg' %}" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-        <!--    <div class="col m2 s4 "><img src="{% static 'images/a1.jpg' %}" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
         {% endfor %}
     </div>
-    <!--//////// gallery images  ...2nd... row   //////-->
-
-    <!--<div class="row">-->
-    <!--    <div class="col m2 s4 "><img src="images/cat.jpg" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-    <!--    <div class="col m2 s4 "><img src="images/cat.jpg" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-    <!--    <div class="col m2 s4 "><img src="images/cat.jpg" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-    <!--    <div class="col m2 s4 "><img src="images/cat.jpg" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-    <!--    <div class="col m2 s4 "><img src="images/cat.jpg" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-    <!--    <div class="col m2 s4 "><img src="images/cat.jpg" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-    <!--</div>-->
-
-    <!--//////// gallery images  ...3rd... row   //////-->
-
-    <!--<div class="row">-->
-    <!--    <div class="col m2 s4 "><img src="images/a2.jpg" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-    <!--    <div class="col m2 s4 "><img src="images/a2.jpg" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-    <!--    <div class="col m2 s4 "><img src="images/a2.jpg" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-    <!--    <div class="col m2 s4 "><img src="images/a2.jpg" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-    <!--    <div class="col m2 s4 "><img src="images/a2.jpg" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-    <!--    <div class="col m2 s4 "><img src="images/a2.jpg" class="responsive-img materialboxed hoverable z-depth-5" data-caption="AHMAD HASSAN" ><br></div>-->
-    <!--</div>-->
 
 
     {%endblock content%}
