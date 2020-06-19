@@ -1,0 +1,75 @@
+{% extends 'template.html' %}
+{%load static%}
+
+{%block content%}
+
+<!-- ////////About us///////-->
+
+<section style="padding:40px">
+    <h6 class="#4db6ac teal-text"><b>DJ Studio Lahore, Pakistan</b></h6>
+    <h6 class="#4db6ac teal-text"><b>Phone : +92 331 4747448</b></h6>
+    <h6 class="#4db6ac teal-text"><b>E-mail : djstudiolahore@gmail.com</b></h6>
+</section>
+
+
+<div class="row">
+    <div class="col s4  offset-s4">
+        <hr>
+        <br></div>
+    <div/>
+    {% for about in about_me %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col m6 s12 z-depth-5" style="padding-top:30px">
+                <img src="https://source.unsplash.com/1920x1280/?studio,camera"
+                     class="responsive-img"
+                     style="height:390px;">
+            </div>
+            <div class="col m6 s12">
+                <h3 class="center-align">Who Am i...?</h3>
+                <h5 class="z-depth-5">Hello, I'm <u><b> Amjad Ilyas </b></u>,{{about.who_am_i}} a professional graphic
+                    designer ,video & photo editor. I love spending time in new creativity.
+                    I have experience of 15 years, I can ensure you to a professional and quality work delivered.
+                    I work hard to make sure all my clients are happy by delivering high-quality work in a timely
+                    manner.
+                    Don't hesitate to contact me before placing your order. Cheers!</h5>
+
+            </div>
+        </div>
+    </div>
+
+    <!--/////////////////     My College Degree   //////////////////    -->
+    <section>
+        <br>
+        <h2 class="center-align #4db6ac teal-text "><b> Qualifications</b></h2>
+    </section>
+
+    <div class="row">
+        <div class="col s4  offset-s4">
+            <hr>
+        </div>
+        <br>
+        <br>
+    </div>
+    <!--//////////////////  javascript---  Collapsible ////////////-->
+    <div class="container">
+        <ul class="collapsible">
+            <li>
+                <div class="collapsible-header hoverable"><i class="material-icons">school</i>Degree</div>
+                <div class="collapsible-body"><span>{{about.degree}}</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header hoverable"><i class="material-icons">lightbulb_outline</i>Skills</div>
+                <div class="collapsible-body"><span>{{about.skills}}</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header hoverable"><i class="material-icons">check_circle</i>Experience</div>
+                <div class="collapsible-body"><span>{{about.experience}}</span></div>
+            </li>
+        </ul>
+    </div>
+    {{break}}
+    {%endfor%}
+
+    {% endblock content%}

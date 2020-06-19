@@ -1,0 +1,115 @@
+{%load static%}
+
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>DJ Studio</title>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- For  jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- For  Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <style>
+        *{font-family: 'Shadows Into Light', cursive;}
+        section{margin:"auto"; font-size:"300%"; text-color:"red"; }
+    </style>
+</head>
+
+<body>
+<div>
+    <nav class="#4db6ac teal lighten-2">
+        <div class="nav-wrapper container">
+            <a href="#!" class="brand-logo">DJ Studio</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/admin">Log In</a></li>
+            </ul>
+
+            <ul class="sidenav" id="mobile-demo">
+
+                <li><a href="/">Home</a></li>
+                <li><a href="gallery">Gallery</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="/admin">Log In</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
+
+<!--  ////////////////  block content area   ////////-->
+
+
+{%block content%}
+
+{% endblock content%}
+
+
+<!--////////////////    footer//////////    -->
+
+<section>
+    <footer class="page-footer #4db6ac teal lighten-2 ">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h6 class="white-text">Email = innovatorslahore@gmail.com</h6>
+                    <p class="grey-text text-lighten-4">Contact me for web development.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">By Ahmad Hassan</h5>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright row">
+            <div class="container">
+                © 2020 DJ Studio Lahore
+
+            </div>
+        </div>
+    </footer>
+
+</section>
+<script>
+         $(document).ready(function(){
+    $('.sidenav').sidenav();
+
+    $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators:true
+  });
+
+
+    $('.collapsible').collapsible();
+
+    $(document).ready(function(){
+    $('.materialboxed').materialbox();
+
+  });
+
+
+  });
+
+
+</script>
+</body>
+</html>
