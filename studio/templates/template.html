@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
+    <!--    /////// social icons//////-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">-->
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -25,8 +29,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 
     <style>
+
+        footer{
+            padding:0; margin:0;}
+
         *{font-family: 'Shadows Into Light', cursive;}
         section{margin:"auto"; font-size:"300%"; text-color:"red"; }
+
+
+
+
     </style>
 </head>
 
@@ -34,7 +46,11 @@
 <div>
     <nav class="#4db6ac teal lighten-2">
         <div class="nav-wrapper container">
-            <a href="#!" class="brand-logo">DJ Studio</a>
+            <a href="#!" class="brand-logo">
+                <img src="{% static 'images/logo.png' %}" class="img-responsive" alt="logo-brand"
+                     style="padding:0; max-height:48px; max-width:auto;">
+                DJ Studio
+            </a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
             <ul class="right hide-on-med-and-down">
@@ -68,18 +84,21 @@
 
 <section>
     <footer class="page-footer #4db6ac teal lighten-2 ">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h6 class="white-text">Email = innovatorslahore@gmail.com</h6>
-                    <p class="grey-text text-lighten-4">Contact me for web development.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">By Ahmad Hassan</h5>
 
-                </div>
-            </div>
+        <div class="row container">
+
+            <h6 class="white-text">
+                Social links :
+                <a href="#"><a href="#" class="fa fa-facebook white-text"></a></a>
+                <a href="#"><a href="#" class="fa fa-twitter white-text"></a></a>
+                <a href="#"><a href="#" class="fa fa-github white-text"></a></a>
+                <a href="#"><a href="#" class="fa fa-linkedin white-text"></a></a>
+                <a href="#"><a href="#" class="fa fa-youtube white-text"></a></a>
+            </h6>
+
+
         </div>
+
         <div class="footer-copyright row">
             <div class="container">
                 © 2020 DJ Studio Lahore
@@ -108,6 +127,8 @@
 
 
   });
+
+
 
 
 </script>

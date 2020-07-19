@@ -1,0 +1,48 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}{{ title }} | Dj-studio{% endblock %}
+
+{% block extrastyle %}
+<style>
+
+    #header {
+    background-color:#4db6ac;
+
+
+}
+    body {
+
+}
+h1 {
+    text-color: white;
+}
+.module caption{
+    background-color:#4db6ac;
+}
+#content-related .module h2,input[type=submit] {
+    background-color:#4db6ac;
+    color:white;
+}
+
+tbody {
+
+}
+
+
+
+
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+        <img src="{% static 'images/logo.png' %}" class="img-responsive" alt="logo-brand"
+             style=" max-height:48px; max-width:auto;">
+        DJ Studio Admin</a></h1>
+
+
+{% endblock %}
+
+
+{% block nav-global %}{% endblock %}

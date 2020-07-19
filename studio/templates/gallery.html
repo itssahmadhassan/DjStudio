@@ -16,41 +16,34 @@
         <hr>
     </div>
     <br>
-    <br>
-    <div/>
+</div>
 
-    <!--//////// gallery images  ...1st... row   //////-->
+<!--//////// gallery images  ...1st... row   //////-->
 
-    <div class="row">
-        {%with a=0 b=2 %}
+<div class="row">
 
-        {% for gallery in gallery %}
-        <div class="col m2 s4">
+    {% for gallery in gallery %}
+    <div class="col m2 s4" style="padding:8px;">
 
-            {% if gallery.upload_video %}
-            <video class="responsive-video" controls>
-                <source src="{{gallery.upload_video}}" type="video/mp4">
-            </video>
-            {% elif gallery.pic_url%}
-            <img src="{{gallery.pic_url}}"
-                 style="height:120px; width:300px;"
-                 class="responsive-img materialboxed hoverable center z-depth-5"
-                 data-caption="{{gallery.caption}}">
-            {% else %}
-            <img src="{{gallery.upload_pic}}"
-                 style="height:120px; width:300px;"
-                 class="responsive-img materialboxed hoverable center z-depth-5"
-                 data-caption="{{gallery.caption}}">
-            {% endif %}
-            {% a = a+1 %}
-            {% if a==6 %}
-            <br><br>
-            {% endif %}
-                {% endwith %}
+        {% if gallery.upload_video %}
+        <video class="responsive-video" controls>
+            <source src="{{gallery.upload_video}}" type="video/mp4" style="max-height:120px; ">
+        </video>
+        {% elif gallery.pic_url%}
+        <img src="{{gallery.pic_url}}"
+             style="max-height:120px; "
+             class="responsive-img materialboxed hoverable center z-depth-5"
+             data-caption="{{gallery.caption}}">
+        {% else %}
+        <img src="studio/media/{{gallery.upload_pic}}"
+             style="max-height:120px; "
+             class="responsive-img materialboxed hoverable center z-depth-5"
+             data-caption="{{gallery.caption}}">
+        {% endif %}
 
-        </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+</div>
 
 
-    {%endblock content%}
+{%endblock content%}

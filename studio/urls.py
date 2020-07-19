@@ -8,4 +8,4 @@ urlpatterns = [
                   path('gallery', views.gallery, name='gallery'),
                   path('about', views.about, name='about'),
 
-              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

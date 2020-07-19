@@ -13,9 +13,10 @@
     </div>
     {% for slider in sliders %}
     {% if slider.pic_url %}
-    <a class="carousel-item" href="#one!"><img src="{{slider.pic_url}}"></a>
+    <a class="carousel-item" href="#one!"><img src="{{slider.pic_url}}" class="responsive-img"></a>
     {% else %}
-    <a class="carousel-item" href="#one!"><img src="{{slider.slider_pic_upload}}"></a>
+    <a class="carousel-item" href="#one!"><img src="studio/media/{{slider.slider_pic_upload}}"
+                                               class="responsive-img"></a>
     {% endif %}
     {% endfor %}
 
@@ -32,70 +33,71 @@
         <hr>
         <br></div>
     <div/>
-    <div class="container">
-        <div class="row">
-            <div class="col m6 s12 z-depth-5" style="padding-top:60px"><img src="{%static 'images/a1.jpg'%}"
-                                                                            class="responsive-img">
-            </div>
-            <div class="col m6 s12">
-                <h3 class="center-align">Who Am i...?</h3>
-                <h5 class="z-depth-5">Hello, I'm <u><b> Amjad Ilyas </b></u>, a professional graphic designer ,video &
-                    photo editor. I love spending time in new creativity.
-                    I have experience of 15 years, I can ensure you to a professional and quality work delivered.
-                    I work hard to make sure all my clients are happy by delivering high-quality work in a timely
-                    manner.
-                    Don't hesitate to contact me before placing your order. Cheers!</h5>
-                <a href="/about" class="waves-effect waves-light btn">Know more</a>
+</div>
 
+<div class="row container">
+    <div class="col m6 s12 z-depth-5" style="padding-top:60px"><img src="{%static 'images/a1.jpg'%}"
+                                                                    class="responsive-img">
+    </div>
+    <div class="col m6 s12">
+        <h3 class="center-align">Who Am i...?</h3>
+        <h5 class="z-depth-5">Hello, I'm <u><b> Amjad Ilyas </b></u>, a professional graphic designer ,video &
+            photo editor. I love spending time in new creativity.
+            I have experience of 15 years, I can ensure you to a professional and quality work delivered.
+            I work hard to make sure all my clients are happy by delivering high-quality work in a timely
+            manner.
+            Don't hesitate to contact me before placing your order. Cheers!</h5>
+        <a href="/about" class="waves-effect waves-light btn">Know more</a>
+
+    </div>
+</div>
+
+
+<!--////////////////////////  our   services////////-->
+
+<section>
+    <br>
+    <h2 class="center-align #4db6ac teal-text "><b>Our Services</b></h2>
+</section>
+
+<div class="row">
+    <div class="col s4  offset-s4">
+        <hr>
+    </div>
+    <br>
+    <br>
+</div>
+
+<!--/////////////  cards /////////////   -->
+
+<div class="row">
+
+    {%for service in services%}
+    <div class="col s12 m4">
+        <div class="card hoverable" ;>
+            <div class="card-image">
+                {% if service.upload_video %}
+
+                <video class="responsive-video" controls>
+                    <source src="studio/media/{{service.upload_video}}" type="video/mp4">
+                </video>
+
+
+                {% elif service.img_url %}
+                <a href="/"><img src="{{service.img_url}}" class="responsive-img"></a>
+                {% else %}
+                <a href="/"><img src="studio/media/{{service.upload_pic}}" class="responsive-img"></a>
+                {% endif %}
+
+                <span class="card-title">{{service.title}}</span>
+            </div>
+            <div class="card-content">
+                <h5>{{service.description}}</h5>
             </div>
         </div>
     </div>
-
-    <!--////////////////////////  our   services////////-->
-
-    <section>
-        <br>
-        <h2 class="center-align #4db6ac teal-text "><b>Our Services</b></h2>
-    </section>
-
-    <div class="row">
-        <div class="col s4  offset-s4">
-            <hr>
-        </div>
-        <br>
-        <br>
-    </div>
-
-    <!--/////////////  cards /////////////   -->
-
-    <div class="row">
-
-        {%for service in services%}
-        <div class="col s12 m4">
-            <div class="card hoverable" ;>
-                <div class="card-image">
-                    {% if service.upload_video %}
-
-                    <video class="responsive-video" controls>
-                        <source src="{{service.upload_video}}" type="video/mp4">
-                    </video>
+    {%endfor%}
+</div>
 
 
-                    {% elif service.img_url %}
-                    <a href="/"><img src="{{service.img_url}}" class="responsive-img"></a>
-                    {% else %}
-                    <a href="/"><img src="{{service.upload_pic}}" class="responsive-img"></a>
-                    {% endif %}
-
-                    <span class="card-title">{{service.title}}</span>
-                </div>
-                <div class="card-content">
-                    <h5>{{service.description}}</h5>
-                </div>
-            </div>
-        </div>
-        {%endfor%}
-    </div>
-
-
-    {% endblock content%}
+{% endblock content%}
